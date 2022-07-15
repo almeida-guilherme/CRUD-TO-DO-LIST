@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js"
+    "start": "node index.js",
+    "dev":"nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Guilherme Henrique",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
