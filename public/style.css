@@ -180,34 +180,36 @@ div#card p {
   line-height: 2rem;
 }
 
-div#btns{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
+div#btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
 }
 
 div#btns a {
-    text-decoration: none;
-    padding: 0.9rem;
-    width: 7rem;
-    text-align: center;
-    background-color: #f84a4a;
+  text-decoration: none;
+  padding: 0.9rem;
+  width: 7rem;
+  text-align: center;
+  background-color: #f84a4a;
 }
 
-div#btns a#btnNot, div#btns a#btnYes{
-    color: #fff;
-    border: solid 1px white;
-    margin-right: 1rem;
-    transition: all 0.3s ease-in-out;
+div#btns a#btnNot,
+div#btns a#btnYes {
+  color: #fff;
+  border: solid 1px white;
+  margin-right: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
-div#btns a#btnNot:hover, div#btns a#btnYes:hover{
-    background-color: #fff;
-    color: #f84a4a;
+div#btns a#btnNot:hover,
+div#btns a#btnYes:hover {
+  background-color: #fff;
+  color: #f84a4a;
 }
 
- .message {
+.message {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -221,37 +223,36 @@ div#btns a#btnNot:hover, div#btns a#btnYes:hover{
   font-weight: 600;
   width: auto;
   color: black;
- }
+}
 
- .message-danger{
+.message-danger {
   background-color: #ff725e;
   color: #8a0000;
- }
+}
 
-
- .message-success{
-  background-color: rgb(197,255,214);
+.message-success {
+  background-color: rgb(197, 255, 214);
   color: #008a1e;
- }
+}
 
- span#close-message{
+span#close-message {
   font-size: 2rem;
   cursor: pointer;
   transition: all 0.3s;
   padding: 2rem;
- }
+}
 
- span#close-message:hover{
+span#close-message:hover {
   color: #f84a4a;
- }
+}
 
- ul li.check-true{
+ul li.check-true {
   background-color: #888888;
   color: #fff;
   text-decoration: line-through;
- }
- 
- ul li a.check-true::before{
+}
+
+ul li a.check-true::before {
   content: "";
   position: absolute;
   border: #fff solid;
@@ -261,9 +262,9 @@ div#btns a#btnNot:hover, div#btns a#btnYes:hover{
   width: 7px;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
- }
+}
 
- ul li a.check-false::before{
+ul li a.check-false::before {
   content: "";
   position: absolute;
   border: #fff solid;
@@ -271,5 +272,5 @@ div#btns a#btnNot:hover, div#btns a#btnYes:hover{
   left: 16px;
   height: 13px;
   width: 13px;
-  border-width:2px;
- }
+  border-width: 2px;
+}
