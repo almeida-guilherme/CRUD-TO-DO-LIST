@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Edu TAS Beginner', cursive;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe8e8;
+    
+}
+
+#content{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    background-color: #ff725e;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .212);
+}
+
+h1{
+    font-size: 70;
+    color: #ffe8e8;
+}
+h1::after{
+    content: "";
+    display: block;
+    width: 3.7rem;
+    height: 0.3rem;
+    background-color: #b26f71;
+    position: absolute;
+    border-radius: 10px;
+}
+
+
+
+#form-data{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#form-data form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#form-data form input {
+    border: none;
+    width: 25vw;
+    height: 9.4vh;
+    border-radius: 30px;
+    font-size: 25;
+    outline: none;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .212);
+}
+
+#form-data button{
+    height: 5vh;
+    transition: all 0.5s ease-in-out;
+    border: none;
+    border-radius: 30px;
+    font-size: 25;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .212);
+}
+#form-data button:hover{
+    background-color: #b26f71;
+}
+
+#form-data p a {
+    text-decoration: none;
+    color: #ffe8e8;
+
+}
+
+#form-data a:hover{
+    transition: all 0.5s ease-in-out;
+    color:red ;
+}
+
+#form-img {
+    width: 50%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+@media screen and (max-width: 720px) and (max-height:1480px){
+
+    #form-data form input {
+        width: 60vw;
+    }
+    
+    #register{
+        background-color: #b26f71;
+        border-radius: 7px;
+        border-width:1cm;
+        margin-left: 10px;
+    }
+
+    #form-data{
+        width: 100%;
+    }
+
+    #form-img{
+        display: none;
+    }
+}

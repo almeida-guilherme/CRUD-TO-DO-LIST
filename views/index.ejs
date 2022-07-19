@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
-    <title>To Do List</title>
+    <link rel="shortcut icon" href="icon/document.png" type="image/x-icon">
+
+    <title>To do list</title>
 </head>
 <body>
 
@@ -18,14 +20,19 @@
     <% } %>
 
     <header>
+        <div id="infoheader">
+            <h3><%= nameglobal %></h3>
+            <h2><%= emailglobal %></h2>
+            <h2><a href="/"><i class="bi bi-box-arrow-right"></i></a></h2>
+        </div>
         <% if (task == null) { %>
             <%- include('./components/form',{titleForm:"TO DO LIST", action:"create", value:"",idBtn:"addButton",nameBtn:"Adicionar"}) %>
          <% } else { %>
             <%- include('./components/form',{titleForm:"EDITAR TAREFA", action:`update/${task._id}`, value:task.task,idBtn:"updateButton",nameBtn:"Atualizar"}) %>
         <% } %>
     </header>
-
-    <section id="tasks">
+    <!-- original -->
+    <!-- <section id="tasks">
         <ul>
             <% taskList.forEach((task) => { %>
                 <li class="check-<%= task.check %>">
@@ -40,7 +47,27 @@
                 </li>
            <%  }) %>
         </ul>
+    </section> -->
+    <!-- teste -->
+    <section id="tasks">
+        <ul>
+            <% taskList.forEach((task) => { %>
+                <% if(task.email == emailglobal) {%>
+                    <li class="check-<%= task.check %>">
+                        <div>
+                            <a href="/check/<%=task._id %>" class="check-<%= task.check %>"></a>><%= task.task %></a>
+                            <span>Criado em <%= task.date.toLocaleDateString('pt-BR') %></span>
+                        </div>
+                        <div>
+                            <a class="btnUpdate" href="/getByID/<%= task.id %>/update"><i class="bi bi-pencil-square"></i></a>
+                            <a class="btnDelete" href="/getByID/<%= task.id %>/delete"><i class="bi bi-trash3"></i></a>
+                        </div>
+                    </li>
+                <%}%>
+           <%  }) %>
+        </ul>
     </section>
+
     <% if (taskDelete != null) { %>
       <%- include('./components/modalDel') %>
     <% } %>

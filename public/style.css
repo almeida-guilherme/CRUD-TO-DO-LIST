@@ -24,6 +24,17 @@ header h1 {
   padding-bottom: 3rem;
   color: #a8686a;
 }
+#infoheader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#infoheader a{
+  text-decoration: none;
+  color:#f6e0e0 ;
+}
 
 input {
   margin: 0;
